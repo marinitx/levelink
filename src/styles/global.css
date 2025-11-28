@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+    --color-light-green: #32F9D1;
+    --color-medium-green: #2DEEAE;
+    --color-dark-green: #2DD087;
+    --color-primary: #263140;
+    --color-secondary: #6D7C93;
+    --color-terciary: #C5CCD7;
+    --color-light-blue: #30ABE5;
+    --color-medium-blue: #2EA5F0;
+    --color-dark-blue: #097DC7;
+    --color-white: #FFFFFF;
+    --font-newake: "Newake", sans-serif;
+    --font-raleway: "Raleway", sans-serif;
+}
+
+@font-face {
+  font-family: "Newake";
+  src: url("./fonts/NewakeFont-Demo.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+		font-family: "Raleway", sans-serif;
+	}
+
+.bg-gradient-green {
+  background: linear-gradient(180deg, #32F9D1 0%, #2DEEAE 100%);
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(180deg, #2EA5F0 0%, #097DC7 100%);
+}
+
+
