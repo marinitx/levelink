@@ -1,46 +1,63 @@
-# Astro Starter Kit: Basics
+#🌐 Levelink — Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+A modern landing page for Levelink, a platform that connects students and companies through real-world micro-projects.
+Built with Astro + TailwindCSS 4.0, featuring a clean UI, glassmorphism visuals, and a responsive layout.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+##🚀 About Levelink
 
-## 🚀 Project Structure
+Levelink connects students, companies, and universities through short, practical micro-projects that enhance experience, visibility, and employability.
 
-Inside of your Astro project, you'll see the following folders and files:
+Students get real experience, build their portfolio, and earn money.
 
-```text
+Companies discover and test future-ready talent.
+
+Universities strengthen employability and industry connection.
+
+This landing page serves as the entry point for all three audiences.
+
+🎯 Features (Landing Page)
+
+Modern, minimal UI with glassmorphism elements
+
+Role selection: Student, Company, University
+
+Dynamic hero section with custom blending effects
+
+App download flow for students
+
+Onboarding entry for companies & universities
+
+Fully responsive across screen sizes
+
+Built on top of Astro with TailwindCSS 4 for fast load and easy styling
+
+🛠️ Tech Stack
+
+Astro – Lightning-fast framework for content & UI
+
+TailwindCSS 4.0 – Utility-first styling with @theme support
+
+Custom fonts via @font-face
+
+Glassmorphism effects using CSS blend modes & shadows
+
+Vite (built into Astro) for dev server + HMR
+
+```📁 Project Structure
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── fonts/
+│   ├── images/
+│   └── slime.png
+│
+├── src/
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
+│
+├── tailwind.config.mjs (if used)
 └── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+´´´
