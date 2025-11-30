@@ -7,24 +7,24 @@ import Footer from "../components/Footer.astro";
 <Layout>
     <Nav />
 
-    <section class="w-full h-full flex justify-center items-center py-20 overflow-visible">
+    <section class="w-full h-full flex justify-center items-center py-12 md:py-20 overflow-visible px-4">
 
         <div class="relative">
             <!-- ⭐ Card principal -->
-            <div class="relative bg-white flex flex-col w-xl h-fit gap-6 px-10 py-14 
+            <div class="relative bg-white flex flex-col w-full max-w-xl h-fit gap-4 md:gap-6 px-6 md:px-10 py-10 md:py-14 
                         rounded-3xl justify-center items-center backdrop-blur-xs
                         shadow-[0_0_60px_25px_rgba(10,229,229,0.35)]">
 
-                <h1 class="font-newake text-primary uppercase text-[42px] mb-2">
+                <h1 class="font-newake text-primary uppercase text-3xl md:text-[42px] mb-2 text-center">
                     Who are you?
                 </h1>
 
                 <!-- Student -->
-                <a class="cursor-pointer bg-gradient-green pr-6 rounded-xl flex flex-row items-center" href="/student">
-                    <img src="./student.png" alt="" class="w-36 h-fit">
-                    <span class="flex flex-col justify-center pl-5 py-4">
-                        <h2 class="text-3xl font-newake uppercase text-primary">A student</h2>
-                        <p class="text-sm text-primary max-w-[260px]">
+                <a class="cursor-pointer bg-gradient-green pr-4 md:pr-6 rounded-xl flex flex-row items-center w-full hover:scale-105 hover:shadow-lg transition-all duration-300" href="/student">
+                    <img src="./student.png" alt="" class="w-24 md:w-36 h-fit flex-shrink-0">
+                    <span class="flex flex-col justify-center pl-3 md:pl-5 py-3 md:py-4">
+                        <h2 class="text-xl md:text-3xl font-newake uppercase text-primary">A student</h2>
+                        <p class="text-xs md:text-sm text-primary max-w-[260px]">
                             I want to improve my skills and employability through real work experience
                             while earning money and contributing to make an impact.
                         </p>
@@ -32,22 +32,22 @@ import Footer from "../components/Footer.astro";
                 </a>
 
                 <!-- Company -->
-                <a class="cursor-pointer bg-gradient-blue pr-6 rounded-xl flex flex-row items-center" href="/company">
-                    <img src="./company.png" alt="" class="w-36 h-fit">
-                    <span class="flex flex-col justify-center pl-5 py-4">
-                        <h2 class="text-3xl font-newake uppercase text-white">An organisation</h2>
-                        <p class="text-sm text-white max-w-[260px]">
+                <a class="cursor-pointer bg-gradient-blue pr-4 md:pr-6 rounded-xl flex flex-row items-center w-full hover:scale-105 hover:shadow-lg transition-all duration-300" href="/company">
+                    <img src="./company.png" alt="" class="w-24 md:w-36 h-fit flex-shrink-0">
+                    <span class="flex flex-col justify-center pl-3 md:pl-5 py-3 md:py-4">
+                        <h2 class="text-xl md:text-3xl font-newake uppercase text-white">An organisation</h2>
+                        <p class="text-xs md:text-sm text-white max-w-[260px]">
                             I want to collaborate with talented students to drive innovation and impact.
                         </p>
                     </span>
                 </a>
 
                 <!-- University -->
-                <a class="cursor-pointer bg-white border border-terciary pr-6 rounded-xl flex flex-row items-center" href="">
-                    <img src="./university.png" alt="" class="w-36 h-fit">
-                    <span class="flex flex-col justify-center pl-5 py-4">
-                        <h2 class="text-3xl font-newake uppercase text-primary">A university</h2>
-                        <p class="text-sm text-secondary max-w-[260px]">
+                <a class="cursor-pointer bg-white border border-terciary pr-4 md:pr-6 rounded-xl flex flex-row items-center w-full hover:scale-105 hover:shadow-lg transition-all duration-300" href="">
+                    <img src="./university.png" alt="" class="w-24 md:w-36 h-fit flex-shrink-0">
+                    <span class="flex flex-col justify-center pl-3 md:pl-5 py-3 md:py-4">
+                        <h2 class="text-xl md:text-3xl font-newake uppercase text-primary">A university</h2>
+                        <p class="text-xs md:text-sm text-secondary max-w-[260px]">
                             I want to collaborate to boost my students' employability
                             and connection with the professional world.
                         </p>
