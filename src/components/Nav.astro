@@ -2,13 +2,130 @@
 import "../styles/global.css";
 ---
 
-<section class="flex flex-row justify-between items-center mx-16 my-10">
-    <img src="./logo.svg" alt="">
-    <ul class="flex flex-row justify-between text-secondary">
-        <li class="mx-2"><a href="">How it works</a></li>
-        <li class="mx-2"><a href="">For Students</a></li>
-        <li class="mx-2"><a href="">For Organisations</a></li>
-        <li class="mx-2"><a href="">About us</a></li>
+<nav class="mx-4 sm:mx-6 md:mx-12 lg:mx-16 my-6 md:my-8">
+  <div class="flex items-center justify-between">
+    <!-- LOGO -->
+    <a href="/" class="shrink-0 z-50">
+      <img src="./logo.svg" alt="logo" class="w-24 sm:w-28 md:w-32 transition-transform hover:scale-105">
+    </a>
+
+    <!-- DESKTOP MENU -->
+    <ul class="hidden lg:flex flex-row items-center gap-8 text-secondary font-medium">
+      <li><a href="" class="hover:text-primary transition-colors duration-200">How it works</a></li>
+      <li><a href="" class="hover:text-primary transition-colors duration-200">For Students</a></li>
+      <li><a href="" class="hover:text-primary transition-colors duration-200">For Organisations</a></li>
+      <li><a href="" class="hover:text-primary transition-colors duration-200">About us</a></li>
     </ul>
-    <a class="px-4 py-1.5 border rounded-full" href="">Get Started</a>
-</section>
+
+    <!-- DESKTOP BUTTON -->
+    <a 
+      class="hidden lg:flex items-center px-6 py-2.5 border-2 border-secondary rounded-full font-medium text-secondary hover:bg-secondary hover:text-white transition-all duration-300 hover:shadow-md" 
+      href="/who"
+    >
+      Get Started
+    </a>
+
+    <!-- MOBILE HAMBURGER -->
+    <button 
+      id="menu-btn"
+      class="lg:hidden flex flex-col gap-1.5 z-50 p-2 -mr-2"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      type="button"
+    >
+      <span id="line1" class="w-6 h-0.5 bg-secondary transition-all duration-300 origin-center"></span>
+      <span id="line2" class="w-6 h-0.5 bg-secondary transition-all duration-300 origin-center"></span>
+      <span id="line3" class="w-6 h-0.5 bg-secondary transition-all duration-300 origin-center"></span>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div 
+    id="mobile-overlay"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+  ></div>
+
+  <!-- MOBILE MENU -->
+  <div 
+    id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-72 sm:w-80 bg-white shadow-2xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden"
+  >
+    <div class="flex flex-col h-full p-8 pt-20">
+      <!-- Menu Items -->
+      <div class="flex flex-col gap-6 text-secondary">
+        <a href="" class="text-lg font-medium hover:text-primary transition-colors duration-200 hover:translate-x-1 transform">
+          How it works
+        </a>
+        <a href="" class="text-lg font-medium hover:text-primary transition-colors duration-200 hover:translate-x-1 transform">
+          For Students
+        </a>
+        <a href="" class="text-lg font-medium hover:text-primary transition-colors duration-200 hover:translate-x-1 transform">
+          For Organisations
+        </a>
+        <a href="" class="text-lg font-medium hover:text-primary transition-colors duration-200 hover:translate-x-1 transform">
+          About us
+        </a>
+      </div>
+
+      <!-- CTA Button -->
+      <a 
+        class="mt-8 px-6 py-3 border-2 border-secondary rounded-full text-center font-medium text-secondary hover:bg-secondary hover:text-white transition-all duration-300" 
+        href="/who"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileOverlay = document.getElementById("mobile-overlay");
+  const line1 = document.getElementById("line1");
+  const line2 = document.getElementById("line2");
+  const line3 = document.getElementById("line3");
+
+  if (menuBtn && mobileMenu && mobileOverlay && line1 && line2 && line3) {
+    let isOpen = false;
+
+    const toggleMenu = () => {
+      isOpen = !isOpen;
+      
+      // Toggle menu
+      if (isOpen) {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileOverlay.classList.remove("pointer-events-none", "opacity-0");
+        document.body.style.overflow = "hidden";
+        menuBtn.setAttribute("aria-expanded", "true");
+      } else {
+        mobileMenu.classList.add("translate-x-full");
+        mobileOverlay.classList.add("pointer-events-none", "opacity-0");
+        document.body.style.overflow = "";
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+
+      // Animate hamburger to X
+      if (isOpen) {
+        line1.style.transform = "rotate(45deg) translateY(7px)";
+        line2.style.opacity = "0";
+        line3.style.transform = "rotate(-45deg) translateY(-7px)";
+      } else {
+        line1.style.transform = "";
+        line2.style.opacity = "1";
+        line3.style.transform = "";
+      }
+    };
+
+    menuBtn.addEventListener("click", toggleMenu);
+    mobileOverlay.addEventListener("click", toggleMenu);
+
+    // Close menu on link click
+    const menuLinks = mobileMenu.querySelectorAll("a");
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (isOpen) toggleMenu();
+      });
+    });
+  }
+</script>

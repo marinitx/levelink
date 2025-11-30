@@ -1,68 +1,84 @@
-<section class="flex items-center justify-center">
-  <div class="bg-light-green rounded-t-3xl gap-4 p-10 flex flex-row items-center justify-center w-fit">
-    
-    <div class="relative bg-white rounded-3xl px-8 pt-10 pb-42 text-center h-[315px] max-w-64 overflow-visible">
-      <h2 class="font-newake uppercase text-xl text-primary leading-none">
-        Companies post micro-projects
-      </h2>
+---
+import "../styles/global.css";
+---
 
-      <p class="text-secondary text-sm mt-2">
-        Small, real-world challenges lasting a few days or weeks
-      </p>
+<section class="flex items-center justify-center px-4 pt-8 md:pt-12 lg:pt-16">
+  <div class="bg-light-green rounded-t-3xl gap-6 md:gap-8 lg:gap-6 p-6 md:p-8 lg:p-10 flex flex-col lg:flex-row items-stretch justify-center w-full max-w-7xl">
+    
+    <!-- STEP 1 -->
+    <div class="relative bg-white rounded-2xl md:rounded-3xl px-6 md:px-7 pt-8 md:pt-10 pb-8 md:pb-10 text-center flex-1 lg:max-w-80 min-h-[280px] md:min-h-[340px] lg:min-h-[315px] overflow-visible flex flex-col">
+      <div class="relative z-10">
+        <h2 class="font-newake uppercase text-lg md:text-xl text-primary leading-tight">
+          Companies post micro-projects
+        </h2>
+
+        <p class="text-secondary text-sm mt-2 md:mt-3 leading-relaxed">
+          Small, real-world challenges lasting a few days or weeks
+        </p>
+      </div>
 
       <img 
         src="./step1.png" 
         alt="" 
-        class="absolute left-1/2 -translate-x-1/2 top-25 w-52 pointer-events-none select-none"
+        class="absolute left-1/2 -translate-x-1/2 bottom-0 w-48 md:w-60 lg:w-52 pointer-events-none select-none"
       />
     </div>
 
-    <div class="relative bg-white rounded-3xl px-8 pb-10 pt-42 text-center h-[315px] max-w-64 overflow-visible">
-        <img 
-          src="./step2.png" 
-          alt="" 
-          class="absolute left-1/2 -translate-x-1/2 -top-3 w-52 pointer-events-none select-none"
-        />
+    <!-- STEP 2 -->
+        <div class="relative bg-white rounded-2xl md:rounded-3xl px-6 md:px-7 pb-8 md:pb-10 pt-8 md:pt-10 text-center flex-1 lg:max-w-80 min-h-[280px] md:min-h-[340px] lg:min-h-[315px] overflow-visible flex flex-col justify-end lg:justify-start lg:mt-auto lg:pt-36">
+      <img 
+        src="./step2.png" 
+        alt="" 
+        class="absolute left-1/2 -translate-x-1/2 top-0 w-48 md:w-60 lg:w-52 pointer-events-none select-none"
+      />
 
-      <h2 class="font-newake uppercase text-xl text-primary leading-none">
-        Students apply and complete them
-      </h2>
+      <div class="relative z-10 pt-2 lg:pt-7 md:pt-7 sm:pt-6">
+        <h2 class="font-newake uppercase text-lg md:text-xl text-primary leading-tight">
+          Students apply and complete them
+        </h2>
 
-      <p class="text-secondary text-sm mt-2">
-        Start earning money, experience and build new skills
-      </p>
+        <p class="text-secondary text-sm mt-2 md:mt-3 leading-relaxed">
+          Start earning money, experience and build new skills
+        </p>
+      </div>
     </div>
 
-    <div class="relative bg-white rounded-3xl px-8 pt-10 pb-42 text-center h-[315px] max-w-64 overflow-visible">
-      <h2 class="font-newake uppercase text-xl text-primary leading-none">
-        Companies review performance
-      </h2>
+    <!-- STEP 3 -->
+    <div class="relative bg-white rounded-2xl md:rounded-3xl px-6 md:px-7 pt-8 md:pt-10 pb-8 md:pb-10 text-center flex-1 lg:max-w-80 min-h-[280px] md:min-h-[340px] lg:min-h-[315px] overflow-visible flex flex-col">
+      <div class="relative z-10">
+        <h2 class="font-newake uppercase text-lg md:text-xl text-primary leading-tight">
+          Companies review performance
+        </h2>
 
-      <p class="text-secondary text-sm mt-2">
-        Fast insight into talent potential
-      </p>
+        <p class="text-secondary text-sm mt-2 md:mt-3 leading-relaxed">
+          Fast insight into talent potential
+        </p>
+      </div>
 
       <img 
         src="./step3.png" 
         alt="" 
-        class="absolute left-35 -translate-x-1/2 top-28 w-56 pointer-events-none select-none"
+        class="absolute left-1/2 -translate-x-1/2 bottom-0 w-52 md:w-64 lg:w-56 pointer-events-none select-none"
       />
     </div>
 
-     <div class="relative bg-white rounded-3xl px-8 pb-10 pt-50 text-center h-[315px] max-w-64 overflow-visible">
-        <img 
-          src="./step4.png" 
-          alt="" 
-          class="absolute left-30 -translate-x-1/2 -top-3 w-72 pointer-events-none select-none"
-        />
+    <!-- STEP 4 -->
+    <div class="relative bg-white rounded-2xl md:rounded-3xl px-6 md:px-7 pb-8 md:pb-10 pt-8 md:pt-10 text-center flex-1 lg:max-w-80 min-h-[280px] md:min-h-[340px] lg:min-h-[315px] overflow-visible flex flex-col justify-end">
+      <img 
+        src="./step4.png" 
+        alt="" 
+        class="absolute left-1/2 -translate-x-1/2 top-0 w-60 md:w-80 lg:w-72 pointer-events-none select-none"
+      />
 
-      <h2 class="font-newake uppercase text-xl text-primary leading-none">
-        Both sides grow
-      </h2>
+      <div class="relative z-10">
+        <h2 class="font-newake uppercase text-lg md:text-xl text-primary leading-tight">
+          Both sides grow
+        </h2>
 
-      <p class="text-secondary text-sm mt-2">
-        Companies find talent, students build portfolios
-      </p>
+        <p class="text-secondary text-sm mt-2 md:mt-3 leading-relaxed">
+          Companies find talent, students build portfolios
+        </p>
+      </div>
     </div>
 
   </div>

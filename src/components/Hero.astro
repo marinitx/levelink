@@ -2,18 +2,62 @@
 import "../styles/global.css";
 ---
 
-<section class="flex justify-center items-center flex-col py-14 relative">
-
-    <h1 class="text-secondary text-center font-raleway">Redefining hiring through</h1>
-    <h1 class="font-newake uppercase text-primary/1 text-8xl text-center py-5">Future-ready<br> talent</h1>
-    <img src="./slime.png" alt="" class="absolute opacity-75 -top-30 pointer-events-none drop-shadow-2xl drop-shadow-light-blue/30">
-    <h1 class="font-newake uppercase text-primary mix-blend-overlay text-8xl text-center py-5 absolute top-20">Future-ready<br> talent</h1>
-    <h2 class="text-secondary text-center font-raleway">Get real solutions from students ready to make an impact.</h2>
+<section class="flex justify-center items-center flex-col py-12 md:py-16 lg:py-18 px-4 relative overflow-hidden min-h-[600px] md:min-h-[700px]">
     
-
-    <div class="mt-6 gap-4 flex flex-row">
-        <a class="rounded-full px-8 py-3 bg-gradient-green" href="">I'm a student</a>
-        <a class="rounded-full px-8 py-3 bg-gradient-blue text-white" href="">I'm an organisation</a>
+    <!-- Texto superior -->
+    <h1 class="text-secondary text-center font-raleway text-base sm:text-lg md:text-xl lg:text-2xl z-10">
+        Redefining hiring through
+    </h1>
+    
+    <!-- Contenedor del texto principal con slime -->
+    <div class="relative flex justify-center items-center my-6 md:my-8 lg:my-10 w-screen">
+        
+        <!-- Texto base (con gradiente) -->
+        <h1 class="font-newake uppercase text-primary/1 text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[110px] text-center leading-tight px-4 relative z-10">
+            Future-ready<br> talent
+        </h1>
+        
+        <!-- Imagen slime (centrada con el texto) -->
+        <img 
+            src="./slime.png" 
+            alt="" 
+            class="absolute opacity-75 pointer-events-none drop-shadow-2xl drop-shadow-light-blue/30 w-full h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+        
+        <!-- Texto overlay (con blend mode) -->
+        <h1 class="font-newake uppercase text-primary mix-blend-overlay text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-[110px] text-center leading-tight px-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen">
+            Future-ready<br> talent
+        </h1>
+    </div>
+    
+    <!-- Texto inferior -->
+    <h2 class="text-secondary text-center font-raleway text-base sm:text-lg md:text-xl lg:text-2xl z-10 px-4 max-w-2xl">
+        Get real solutions from students ready to make an impact.
+    </h2>
+    
+    <!-- Botones CTA -->
+    <div class="mt-8 md:mt-10 gap-3 sm:gap-4 flex flex-col sm:flex-row z-10 w-full sm:w-auto px-4">
+        <a 
+            class="rounded-full px-6 sm:px-8 py-3 bg-gradient-green text-center font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm sm:text-base" 
+            href="/student"
+        >
+            I'm a student
+        </a>
+        <a 
+            class="rounded-full px-6 sm:px-8 py-3 bg-gradient-blue text-white text-center font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm sm:text-base" 
+            href="/company"
+        >
+            I'm an organisation
+        </a>
     </div>
 </section>
 
+<!-- <style>
+    /* Asegurar que el slime se vea completo en pantallas grandes */
+    @media (min-width: 1536px) {
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+    }
+</style> -->
