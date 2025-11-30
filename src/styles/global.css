@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/39b8ee47d55a237ed550daae4ca70390?family=Newake+Demo);
 @import "tailwindcss";
 
 @theme {
@@ -19,9 +20,12 @@
 
 @font-face {
   font-family: "Newake";
-  src: url("./fonts/NewakeFont-Demo.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+  src: url("https://db.onlinewebfonts.com/t/39b8ee47d55a237ed550daae4ca70390.eot");
+    src: url("https://db.onlinewebfonts.com/t/39b8ee47d55a237ed550daae4ca70390.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/39b8ee47d55a237ed550daae4ca70390.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/39b8ee47d55a237ed550daae4ca70390.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/39b8ee47d55a237ed550daae4ca70390.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/39b8ee47d55a237ed550daae4ca70390.svg#Newake Demo")format("svg");
 }
 
 p {
